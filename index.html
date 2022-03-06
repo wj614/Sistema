@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 <title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,11 +7,13 @@
 <link rel="stylesheet" href="w3.css">
 <link rel="stylesheet" href="style.css">
 <script src="https://use.fontawesome.com/e7946fdd9f.js"></script>
+
 <style>
 .mySlides {display:none;}
 </style>
 </head>
 
+<!--Menu-->
 <body>
     <nav>
         <input type="checkbox" id="check">
@@ -27,28 +28,40 @@
           <li><a href="#">Sobre nos</a></li>
         </ul>
       </nav>
-<section>
+
+<!--Slideshow-->
 <div class="w3-content w3-section" style="max-width:1700px">
   <img class="mySlides" src="img4.png" style="width:100%;">
   <img class="mySlides" src="img1.png" style="width:100%;">
 </div>
-</section>
-<script>
-var myIndex = 0;
-carousel();
+  <script src="java.js"></script>
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
-}
-</script>
-
+  <!--Cards-->
+  <main class="cards">
+    <section class="card contact" id="cardone">
+        <div class="icon">
+            <img src="assets/Chat.png" alt="Contact us.">
+        </div>
+        <h3>Contact us.</h3>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        <button>Learn More</button>
+    </section>
+    <section class="card shop">
+        <div class="icon">
+            <img src="assets/Bag.png" alt="Shop here.">
+        </div>
+        <h3>Shop here.</h3>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        <button>Learn More</button>
+    </section>
+    <section class="card about">
+        <div class="icon">
+            <img src="assets/Play.png" alt="About us.">
+        </div>
+        <h3>About us.</h3>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+        <button>Learn More</button>
+    </section>
+</main>
 </body>
 </html>
